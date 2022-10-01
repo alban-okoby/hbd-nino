@@ -1,0 +1,139 @@
+    :root {
+    --white :#eee;
+    --gray: #666;
+    --coral: coral;
+    --black1: rgba(0, 0, 0, 0.772);
+}
+
+*{ 
+    margin: 0; padding: 0;
+    box-sizing: border-box; 
+    text-transform: capitalize; 
+    font-family: Arial, Helvetica, sans-serif;
+    transition: all 0.3s cubic-bezier(0.075, 0.82, 0.165, 1);
+    transition: all 0.3s cubic-bezier(0.34, 1.12, 0.65, 1.31);
+}
+
+.gallery-container {
+    background: var(--white);
+    min-height: 100vh;
+    padding-bottom: 100px;
+}
+
+.gallery-container .controls { 
+    background-color: var(--coral);
+    padding: .5rem 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+    /* background-color: rgb(218, 90, 21); */
+    box-shadow: 0 0 0 .1rem #fff;
+    position: fixed;
+    width: 100%;
+    z-index: 999;
+    
+}
+.gallery-container .controls:hover {
+    cursor: pointer;;
+}
+
+.controls .buttons {
+    background: var(--white);
+    color: var(--gray);
+    width: 150px;
+    height: 40px;
+    font-size: 1.6rem;
+    line-height: 40px;
+    text-align: center;
+    margin: 1.6rem;
+    box-shadow: 0 .1rem .2rem rgb(0, 0, 0, 0.3);
+    border-radius: .7rem;
+}
+.controls .buttons.active {
+    /* background: var(--coral); */
+    background: blueviolet;
+    color: var(--white);
+}
+.image-container {
+    padding-top: 9rem;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.image-container .image {
+    width: 350px;
+    height: 250px;
+    overflow: hidden;
+    margin-top: 20px;
+    border: .7rem solid #fff;
+    box-shadow: 0 .1rem .3rem var(--gray);
+    border-radius: .3rem;
+}
+
+.image-container .image img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+.image-container .image img:hover{
+    transform: scale(1.2);
+}
+
+/* FOOTER SECTION */
+footer {
+    background-color: var(--black1);
+    color: var(--white);
+    padding: 5rem;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    border-top: blueviolet solid 3px;
+
+}
+
+footer div {
+    padding: 1rem 3rem;
+    margin: 1rem .2rem;
+    max-width: 24rem;
+}
+footer div hr {
+    color : red;
+    padding: .2em;
+    margin: 1rem 0;
+    width: 14.5rem;
+    background: linear-gradient(to right, blueviolet, var(--coral))
+}
+footer h3 {
+    color: var(--coral);
+    font-size: 22px;
+}
+footer .copyright {
+    text-align: center;
+}
+footer .copyright h3 {
+    text-align: left;
+}
+footer .copyright a{
+    color: rgb(183, 62, 161);
+    font-size: 24px;
+}
+footer a img {
+    width: 40px; height: 40px; 
+    border-radius: 50%;
+    margin-top: 12px;
+    margin-bottom: -12px;
+    justify-self: baseline;
+}
+/* END FOOTER SECTION */
+
+@media screen and (max-width: 767px) {
+    
+.gallery-container .controls {
+    position: initial;   
+}
+
+}
